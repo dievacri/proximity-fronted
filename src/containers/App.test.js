@@ -24,7 +24,7 @@ describe('App', () => {
    });
 
     test('Render App component with posts', () => {
-        const { getAllByRole, debug } = render(<App />, { initialState: { posts: { list: posts, error: null}}});
+        const { getAllByRole } = render(<App />, { initialState: { posts: { list: posts, error: null}}});
         expect(getAllByRole('post')).toHaveLength(2);
     });
 });
