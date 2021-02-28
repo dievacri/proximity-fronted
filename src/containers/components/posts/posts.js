@@ -1,17 +1,15 @@
 import React from 'react';
 import './posts.scss';
+import Post from "../post/post";
 
-const Posts = ({ posts }) => {
-  return (
-      <div className="posts-container" data-testid="posts">
-          {posts && posts.map((post, index) => (
-              <div key={`post-item${index}`} className="post" role="post">
-                  <h3>{post.title}</h3>
-                  <p>{post.body}</p>
-              </div>
-          ))}
-      </div>
-  );
+const Posts = ({posts}) => {
+    return (
+        <div className="posts-container" data-testid="posts">
+            {posts && posts.map((post, index) => (
+                <Post key={`post-item${index}`} post={post} />
+            ))}
+        </div>
+    );
 };
 
 export default Posts;
