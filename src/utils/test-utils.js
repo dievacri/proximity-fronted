@@ -4,6 +4,9 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from '../store/reducers';
 
+/**
+ * Render function helps in the unit test to wrap the component with a redux store
+ * */
 function render(
     ui,
     {

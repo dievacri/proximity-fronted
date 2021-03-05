@@ -4,6 +4,10 @@ import {useDispatch, useSelector} from "react-redux";
 import {getComments} from "../../../store/comment/actions";
 import { addComment } from "../../../store/comment/actions";
 
+/**
+ * Comments Component - Show comments from the post selected
+ * @param {string} postId - The post identification
+ */
 const Comments = ({ postId }) => {
     const dispatch = useDispatch();
     const { list: comments } = useSelector(state => state.comments);
@@ -11,6 +15,9 @@ const Comments = ({ postId }) => {
     const [email, setEmail] = useState('');
     const [body, setBody] = useState('');
 
+    /**
+     * Add a comment to the post
+     */
     const onAddComment = () => {
         dispatch(addComment({name, email, body}));
         setName('');

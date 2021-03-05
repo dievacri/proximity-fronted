@@ -1,7 +1,9 @@
 import {handleActions} from "redux-actions";
 import {commentInitialState} from "./state";
 import {ADD_COMMENT, GET_COMMENTS, GET_COMMENTS_DONE} from "./constants";
-
+/**
+* Comment Reducer - manage the state of the comments
+* */
 const commentReducer = handleActions({
     [GET_COMMENTS]: state => ({
         ...state,

@@ -9,6 +9,9 @@ const App = () => {
     const { list: postList } = useSelector(state => state.posts);
 
     useEffect(() => {
+        /**
+         * dispatch action "getPosts" to list the posts from the API
+         * */
         dispatch(getPosts());
     }, [dispatch]);
 
